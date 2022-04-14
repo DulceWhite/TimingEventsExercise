@@ -47,6 +47,9 @@ btn.addEventListener(`click`, () => {
 
 //4
 
+
+
+
 const p3 = document.createElement(`p`);
 const div3 = document.querySelector(`#countdown`);
 div3.append(p3);
@@ -58,7 +61,7 @@ let time = staringMinutes* 60;
 const inter = setInterval(updateCountdown, 1000);
 
 function updateCountdown () {
-  const minutes = Math.floor(time / 60);
+  let minutes = Math.floor(time / 60);
   let seconds = time % 60;  
  if (seconds > 0 && minutes > 0){
      p3.innerText = `Time left   ${minutes}:${seconds}s`;
@@ -68,6 +71,11 @@ function updateCountdown () {
  }
   time--;
 }
+
+
+
+
+
 
 
 //create variable min and sec/ combine (another var) then then take that number and reduce the 
